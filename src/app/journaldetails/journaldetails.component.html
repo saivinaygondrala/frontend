@@ -1,0 +1,33 @@
+<div class="journal">
+    <div class="journal-container">
+        <div class="journal-title-container">
+        <h1>Title: {{journal.title}}</h1>
+        <a href="#" *ngIf="journal.username">Edit</a>
+    </div>
+        <br>
+        <h3>Abstract:</h3>
+        <p> {{journal.abstract}}</p>
+        <br>
+        <h3>Content:</h3>
+        <p> {{journal.description}} </p>
+        <br>
+        <h3>User: </h3>
+        <p>{{journal.username}}</p>
+        <br>
+        <h3>Conclusion: </h3>
+        <p>{{journal.conclusion}}</p>
+        <br>
+        <h3>References:</h3>
+        <p> {{journal.references}}</p>
+        <br>
+        <h3>Authors: </h3>
+        <p>{{journal.authors}}</p>
+        <br>
+        <h3>Created Date: </h3>
+        <p>{{journal.createdAt | dateFormat}}</p>
+        <br>
+        <h3>Last Updated at: </h3>
+        <p>{{journal.updatedAt | dateFormat}}</p>
+
+    </div>
+</div>

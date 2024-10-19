@@ -1,0 +1,29 @@
+<div class="journals-table">
+    <table class="journals-table" border="1px" *ngIf="length>0">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Title</th>
+                <th>Authors</th>
+                <th>Abstract</th>
+                <th>Publication Date</th>
+                <th>Username</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Using *ngFor to loop over the journals array -->
+            <tr *ngFor="let journal of journals; let i = index">
+                <td>{{ i + 1 }}</td> <!-- Displaying the serial number dynamically -->
+                <td><a [routerLink]="['/journals', journal._id]" (click)="logAndNavigate(journal!._id)">{{ journal.title }}</a>
+                </td>
+                <td>{{ journal.authors }}</td>
+                <td>{{ journal.abstract }}</td>
+                <td>{{ journal.createdAt }}</td>
+                <td>{{ journal.username }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <h2 *ngIf="length<=0"> No Journals Found</h2>
+    </div>
+</div>
