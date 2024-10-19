@@ -1,42 +1,49 @@
 <div class="journal-form">
-    <form [formGroup]="journalForm" (ngSubmit)="handleJournalSubmit()">
-      <h3>Create New Journal</h3>
-      
-      <!-- Title Input -->
-      <input type="text" name="title" id="title" placeholder="Enter the Title" required formControlName="title">
-      <br>
-  
-      <!-- Authors Input -->
-      <input type="text" name="authors" id="authors" required formControlName="authors" placeholder="Enter the Authors">
-      <br>
-  
-      <!-- Tags Input -->
-      <input type="text" name="tags" id="tags" required formControlName="tags" placeholder="Enter the Tags/ Categories">
-      <br>
-      <br>
-  
-      <!-- Content Textarea -->
-      <textarea name="content" id="content" formControlName="content" placeholder="Enter the Main Content" rows="10" cols="50"></textarea>
-      <br>
-  
-      <!-- Abstract Input -->
-      <textarea name="abstract" id="abstract" formControlName="abstract" placeholder="Enter the Abstract" rows="5"></textarea>
-      <br>
-  
-      <!-- Description Input -->
-      <textarea name="description" id="description" formControlName="description" placeholder="Enter the Description" rows="5"></textarea>
-      <br>
-  
-      <!-- Conclusion Input -->
-      <textarea name="conclusion" id="conclusion" formControlName="conclusion" placeholder="Enter the Conclusion" rows="5"></textarea>
-      <br>
+  <form [formGroup]="journalForm" (ngSubmit)="handleJournalSubmit()">
+    <h3>Create New Journal</h3>
 
-      <!-- References Input -->
-      <textarea name="references" id="references" formControlName="references" placeholder="Enter the References" rows="5"></textarea>
-      <br>
-  
-      <!-- Submit Button -->
-      <button type="submit" [disabled]="journalForm.invalid">Submit</button>
-    </form>
-  </div>
-  
+    <!-- Title Input -->
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title" placeholder="Enter the Title" required formControlName="title">
+    <br>
+
+    <!-- Authors Input -->
+    <label for="authors">Authors:</label>
+    <input type="text" name="authors" id="authors" required formControlName="authors" placeholder="Enter the Authors">
+    <br>
+
+    <!-- Tags Input -->
+    <label for="tags">Tags/Categories:</label>
+    <input type="text" name="tags" id="tags" required formControlName="tags" placeholder="Enter the Tags/ Categories">
+    <br>
+    <br>
+
+    <!-- Content Textarea -->
+    <label for="content">Main Content:</label>
+    <textarea name="content" id="content" formControlName="content" placeholder="Enter the Main Content" rows="10" cols="50"></textarea>
+    <br>
+
+    <!-- Abstract Input -->
+    <label for="abstract">Abstract:</label>
+    <textarea name="abstract" id="abstract" formControlName="abstract" placeholder="Enter the Abstract" rows="5"></textarea>
+    <br>
+
+    <!-- Description Input -->
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" formControlName="description" placeholder="Enter the Description" rows="5"></textarea>
+    <br>
+
+    <!-- Conclusion Input -->
+    <label for="conclusion">Conclusion:</label>
+    <textarea name="conclusion" id="conclusion" formControlName="conclusion" placeholder="Enter the Conclusion" rows="5"></textarea>
+    <br>
+
+    <!-- References Input -->
+    <label for="references">References:</label>
+    <textarea name="references" id="references" formControlName="references" placeholder="Enter the References" rows="5"></textarea>
+    <br>
+
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="journalForm.invalid">Submit</button>
+  </form>
+</div>

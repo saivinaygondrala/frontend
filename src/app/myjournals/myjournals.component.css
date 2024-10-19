@@ -1,0 +1,20 @@
+.journals-container {
+    margin: 1rem;
+}
+
+.journals-container .journals-table>td {
+    padding: 8px;
+}
+
+.journals-container .journals-table td button {
+    background: red;
+    color: white;
+    border: 5px;
+    cursor: pointer;
+    padding: .3rem;
+    border-radius: 5px;
+}
+
+.journals-container .journals-table td {
+    text-align: center;
+}

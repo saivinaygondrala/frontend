@@ -1,13 +1,13 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { DateFormatPipe } from "../date-format.pipe";
 import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-journaldetails',
   standalone: true,
-  imports: [HttpClientModule, DateFormatPipe, NgIf],
+  imports: [HttpClientModule, DateFormatPipe, NgIf, RouterModule],
   templateUrl: './journaldetails.component.html',
   styleUrl: './journaldetails.component.css',
 })

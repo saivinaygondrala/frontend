@@ -14,7 +14,8 @@
             <!-- Using *ngFor to loop over the journals array -->
             <tr *ngFor="let journal of journals; let i = index">
                 <td>{{ i + 1 }}</td> <!-- Displaying the serial number dynamically -->
-                <td><a [routerLink]="['/journals', journal._id]" (click)="logAndNavigate(journal!._id)">{{ journal.title }}</a>
+                <td><a [routerLink]="['/journals', journal._id]" (click)="logAndNavigate(journal!._id)">{{ journal.title
+                        }}</a>
                 </td>
                 <td>{{ journal.authors }}</td>
                 <td>{{ journal.abstract }}</td>

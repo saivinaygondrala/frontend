@@ -5,3 +5,7 @@
 .journals-table table  > td{
     padding: 8px;
 }
+
+.journals-table .journals-table td {
+    text-align: center;
+}

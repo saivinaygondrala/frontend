@@ -2,7 +2,7 @@
     <div class="journal-container">
         <div class="journal-title-container">
         <h1>Title: {{journal.title}}</h1>
-        <a href="#" *ngIf="journal.username  == this.username">Edit</a>
+        <a [routerLink]="['/update-journal',journal._id]" *ngIf="journal.username  == this.username">Edit</a>
     </div>
         <br>
         <h3>Abstract:</h3>

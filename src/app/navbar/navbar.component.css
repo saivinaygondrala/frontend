@@ -1,5 +1,7 @@
 .navbar{
     display: flex;
+    background: #000;
+    color: white;
 }
 
 .navbar > ul{
@@ -15,6 +17,8 @@
 
 .navbar > ul > li > a{
     text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
 
 .navbar ul li .main-text{
@@ -35,4 +39,5 @@ border: none;
 background: transparent;
 font-size: medium;
 cursor: pointer;
+color:white
 }

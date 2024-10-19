@@ -1,1 +1,32 @@
-<p>myjournals works!</p>
+<div class="journals-container">
+    <table class="journals-table" border="1px">
+        <thead *ngIf="journals.length>0">
+            <tr>
+                <th>S.no</th>
+                <th>Title</th>
+                <th>Authors</th>
+                <th>Abstract</th>
+                <th>Publication Date</th>
+                <th>Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Move ngIf outside of ngFor -->
+            <tr *ngFor="let journal of journals; let i = index">
+                <td >{{i + 1}}</td>
+                <td>
+                    
+                   <a [routerLink] = "['/journals',journal._id]"> {{journal.title}}</a>
+                
+                </td>
+                <td>{{journal.authors.join(', ')}}</td> <!-- Join authors array -->
+                <td>{{journal.abstract}}</td>
+                <td>{{journal.createdAt}}</td> <!-- Format the date -->
+                <td>
+                    <button (click)="deleteMyJournal(i)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 *ngIf="journals.length==0"> No Journals Found</h3>
+</div>

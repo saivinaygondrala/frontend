@@ -16,6 +16,7 @@ export class NavbarComponent implements OnInit {
   public logout() {
     if (localStorage.getItem('loginToken')){
       localStorage.removeItem('loginToken');
+      localStorage.removeItem('username');
       window.location.reload();
     }
 

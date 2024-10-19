@@ -50,7 +50,9 @@ export class LoginComponent {
             console.log('Successful login', res);
             localStorage.setItem('loginToken', res.loginToken);
             localStorage.setItem('username', res.username);
-            this.router.navigate(['/home']);
+            this.router.navigate(['/home']).then(()=>{
+              window.location.reload();
+            })
           },
           (error) => {
             console.error('Error during login', error);

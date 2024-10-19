@@ -18,11 +18,6 @@ export class JournallistComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
-    if(localStorage.getItem("loginToken"))
-    this.fetchJournals(); // Call the method to fetch journals on initialization
-  else{
-    this.router.navigate(['/login']);
-  }
   }
 
   public fetchJournals() {

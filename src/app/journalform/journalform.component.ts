@@ -6,6 +6,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-journalform',
@@ -18,7 +19,7 @@ export class JournalformComponent {
   journalForm!: FormGroup;
   username!: string;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {}
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
     this.username = localStorage.getItem('username') || '';
@@ -53,7 +54,7 @@ export class JournalformComponent {
         .post('http://localhost:3000/create-journal', formVals)
         .subscribe((res) => {
           console.log('Successfully Created Journal', res);
-          alert("Successfully created Journal");
+          this.router.navigate(['/home']);
         },
       (error)=>{
         alert("Issue in creating Journal");
