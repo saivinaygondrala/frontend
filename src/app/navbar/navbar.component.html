@@ -1,0 +1,15 @@
+<div class="navbar">
+    <ul>
+        <li>
+            <a href="/home" class="main-text">Journal Publication App</a>
+        </li>
+    </ul>
+    <ul>
+        <li><a href="/home" routeLink="/journallist">Home</a></li>
+        <li *ngIf="!isLoggedIn"><a href="/login" routeLink="/login">Login</a></li>
+        <li *ngIf="!isLoggedIn"><a href="/signup" routeLink="/signup">Signup</a></li>
+        <li *ngIf="isLoggedIn"><a href="/create-journals" routeLink="/journals">Create</a></li>
+        <li><a href="/my-journals">My Journals</a></li>
+        <li class="btn" *ngIf="isLoggedIn"><button (click)="logout()">Logout</button></li>
+    </ul>
+    </div>

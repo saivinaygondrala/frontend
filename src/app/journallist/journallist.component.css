@@ -1,0 +1,7 @@
+.journals-table{
+    margin: 1rem;
+}
+
+.journals-table table  > td{
+    padding: 8px;
+}

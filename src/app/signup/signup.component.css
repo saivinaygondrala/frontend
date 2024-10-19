@@ -1,0 +1,29 @@
+.signup-container{
+    display: flex;
+    width: auto;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+.signup-container form{
+    padding: 3rem;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.signup-container > form > *{
+    padding: .5rem;
+    margin: .3rem;
+}
+
+.signup-container > form > input{
+    border-radius: 4px;
+}
+
+.signup-container > form > button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}

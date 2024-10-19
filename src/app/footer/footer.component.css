@@ -1,0 +1,13 @@
+.footer-txt{
+    bottom: 0;
+    position: absolute;
+    padding: .5rem;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+.footer-txt > p{
+    font-weight: 400;
+    font-size: small;
+}
