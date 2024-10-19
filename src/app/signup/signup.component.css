@@ -1,29 +1,72 @@
-.signup-container{
+.signup-container {
     display: flex;
-    width: auto;
+    width: 100%;
     height: 70vh;
     justify-content: center;
     align-items: center;
+    margin-top: 70px; /* Add margin to move it down from the navbar */
 }
-.signup-container form{
-    padding: 3rem;
-    border: 1px solid;
+
+.signup-container form {
+    padding: 2rem;
+    border: 1px solid #e0e0e0; /* Light gray border */
     display: flex;
     flex-direction: column;
+    border-radius: 10px; /* Increased border radius for smoother corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff; /* White background for the form */
+    width: 90%;
+    max-width: 400px; /* Restrict maximum width */
+}
+
+.signup-container > form > * {
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+}
+
+.signup-container > form > input {
     border-radius: 5px;
+    border: 1px solid #ccc; /* Light gray border */
+    padding: 0.5rem; /* Increased padding for comfort */
+    transition: border-color 0.3s; /* Smooth transition */
 }
 
-.signup-container > form > *{
-    padding: .5rem;
-    margin: .3rem;
+.signup-container > form > input:focus {
+    border-color: orange; /* Change border color to orange on focus */
+    outline: none; /* Remove default outline */
 }
 
-.signup-container > form > input{
-    border-radius: 4px;
-}
-
-.signup-container > form > button{
+.signup-container > form > button {
     border: none;
-    background: transparent;
+    background-color: orange; /* Primary orange color */
+    color: white; /* Text color white for contrast */
+    padding: 0.8rem 1.5rem; /* More padding for better button size */
     cursor: pointer;
+    border-radius: 5px; /* Smooth corners for the button */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    width: 100%; /* Set the button to take the full width */
+    text-align: center; /* Center align the text */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+}
+
+.signup-container > form > button:hover {
+    background-color: darkorange; /* Darker shade of orange on hover */
+}
+
+.signup-container > form > span {
+    text-align: center; /* Center align the text */
+}
+
+@media (max-width: 600px) {
+    .signup-container {
+        height: auto; /* Allow height to be flexible on small screens */
+        padding: 1rem; /* Add some padding */
+        margin-top: 50px; /* Adjust margin for smaller screens */
+    }
+
+    .signup-container form {
+        width: 95%; /* More width for small screens */
+    }
 }

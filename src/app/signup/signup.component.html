@@ -1,13 +1,11 @@
 <div class="signup-container">
     <form [formGroup]="signupForm" (submit)="handleSubmitSignUp()">
-        <h1>Signup </h1>
-        <input type="text" name="username" id="username" required placeholder="Enter Username"
-            formControlName="username">
+        <h1>Signup</h1>
+        <input type="text" name="username" id="username" required placeholder="Enter Username" formControlName="username">
         <br>
         <input type="email" name="email" id="email" required placeholder="Enter Email Id" formControlName="email">
         <br>
-        <input type="password" name="password" id="password" required placeholder="Enter your password"
-            formControlName="password">
+        <input type="password" name="password" id="password" required placeholder="Enter your password" formControlName="password">
         <br>
         <span>Already had an Account? <a href="/login">Login</a></span>
         <br>

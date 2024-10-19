@@ -1,43 +1,101 @@
-.navbar{
+.navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #000;
     color: white;
+    padding: 1rem;
+    flex-wrap: wrap;
+    /* Allows the navbar to wrap on smaller screens */
 }
 
-.navbar > ul{
+.brand {
+    flex: 1;
+    /* Takes available space */
+}
+
+.navbar nav {
+    flex: 2;
+    /* Allows room for navigation items */
+}
+
+.navbar>nav>ul {
     list-style-type: none;
     display: flex;
-    margin: .5rem;
-    justify-content: space-around;
+    justify-content: flex-end;
+    /* Aligns items to the right */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
 }
 
-.navbar > ul > *{
-    padding: .5rem;
+.navbar>nav>ul>li {
+    margin: 0 0.5rem;
+    /* Spacing between nav items */
 }
 
-.navbar > ul > li > a{
+.navbar>nav>ul>li>a {
     text-decoration: none;
     color: white;
-    cursor: pointer;
+    padding: 0.5rem 1rem;
+    /* Padding for links */
+    border-radius: 4px;
+    /* Rounded corners */
+    transition: background-color 0.3s;
+    /* Smooth transition */
 }
 
-.navbar ul li .main-text{
+.navbar>nav>ul>li>a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Slightly lighter on hover */
+}
+
+.navbar ul li .main-text {
     font-family: "Sixtyfour Convergence", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "BLED" 0,
-      "SCAN" 0,
-      "XELA" 0,
-      "YELA" 0;  
 }
 
-.navbar ul li button{
-background-color: none;
-border: none;
-background: transparent;
-font-size: medium;
-cursor: pointer;
-color:white
+.navbar ul li button {
+    background: transparent;
+    border: none;
+    font-size: medium;
+    cursor: pointer;
+    color: white;
+}
+
+.navbar ul li button:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+.navbar .brand a {
+    text-decoration: none;
+    color: orange;
+    font-weight: 900;
+    font-size: larger;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        /* Stack items on smaller screens */
+        align-items: flex-start;
+        /* Align to start */
+    }
+
+    .navbar nav>ul {
+        flex-direction: column;
+        /* Stack nav items */
+        width: 100%;
+        /* Full width */
+    }
+
+    .navbar nav>ul>li {
+        margin: 0.5rem 0;
+        /* Spacing for stacked items */
+        width: 100%;
+        /* Full width for links */
+    }
 }

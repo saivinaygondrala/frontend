@@ -1,20 +1,72 @@
 .journals-container {
     margin: 1rem;
+    overflow-x: auto; /* Allow horizontal scrolling */
 }
 
-.journals-container .journals-table>td {
-    padding: 8px;
+.journals-table {
+    width: 100%; /* Full width for responsiveness */
+    border-collapse: collapse; /* Combine borders */
 }
 
-.journals-container .journals-table td button {
-    background: red;
-    color: white;
-    border: 5px;
-    cursor: pointer;
-    padding: .3rem;
-    border-radius: 5px;
-}
-
-.journals-container .journals-table td {
+.journals-table th, .journals-table td {
+    padding: 12px; /* Increased padding for a better look */
     text-align: center;
+    border: 1px solid #ddd; /* Add a subtle border */
+}
+
+.journals-table th {
+    background-color: orange;
+    color: white; /* Light grey for header */
+    font-weight: bold; /* Bold text for header */
+}
+
+.journals-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra stripe effect */
+}
+
+.journals-table tr:hover {
+    background-color: #f1f1f1; /* Hover effect */
+}
+
+.journals-table td button {
+    background-color: red; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 0.5rem 1rem; /* Add padding for buttons */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.journals-table td button:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+
+.journals-container h2 {
+    text-align: center; /* Center the message */
+    color: #888; /* Light gray for no journals found message */
+}
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .journals-table {
+        font-size: 14px; /* Smaller text on mobile */
+    }
+
+    .journals-table th, .journals-table td {
+        padding: 8px; /* Reduce padding on mobile */
+    }
+
+    .journals-container {
+        margin: 0.5rem; /* Reduce margin on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .journals-table {
+        font-size: 12px; /* Even smaller text on extra small screens */
+    }
+
+    .journals-table td button {
+        padding: 0.3rem; /* Reduce button padding */
+    }
 }

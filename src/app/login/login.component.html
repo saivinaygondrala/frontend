@@ -1,12 +1,9 @@
 <div class="login-container">
     <form [formGroup]="loginForm" (submit)="handleSubmitLogin()">
-        <h1>Login </h1>
+        <h1>Login</h1>
         <input type="text" name="username" id="username" required placeholder="Enter Username" formControlName="username">
-        <br>
         <input type="password" name="password" id="password" required placeholder="Enter your password" formControlName="password">
-        <br>
-        <span>Don't have an account <a href="/signup">Signup</a></span>
-        <br>
-        <button type="submit" [disabled] = "loginForm.invalid">Submit</button>
+        <span>Don't have an account? <a href="/signup">Signup</a></span>
+        <button type="submit" [disabled]="loginForm.invalid">Submit</button>
     </form>
 </div>

@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgFor, NgIf } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
+import { DateFormatPipe } from '../date-format.pipe';
 
 @Component({
   selector: 'app-journallist',
   standalone: true,
-  imports: [HttpClientModule, NgFor ,NgIf, RouterModule],
+  imports: [HttpClientModule, NgFor ,NgIf, RouterModule, DateFormatPipe],
   templateUrl: './journallist.component.html',
   styleUrls: ['./journallist.component.css'],
 })
@@ -18,6 +19,7 @@ export class JournallistComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
+    this.fetchJournals();
   }
 
   public fetchJournals() {

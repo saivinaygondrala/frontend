@@ -2,22 +2,24 @@ import { NgFor, NgIf } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { DateFormatPipe } from '../date-format.pipe';
 
 @Component({
   selector: 'app-myjournals',
   standalone: true,
-  imports: [NgFor, HttpClientModule, NgIf, RouterModule],
+  imports: [NgFor, HttpClientModule, NgIf, RouterModule,DateFormatPipe],
   templateUrl: './myjournals.component.html',
   styleUrl: './myjournals.component.css'
 })
 export class MyjournalsComponent implements OnInit{
   journals!:any;
   username!:string;
-  endpoint:string="http://localhost:3000"
+  endpoint:string="http://localhost:3000";
+  length:number=0;
   constructor(private http:HttpClient){}
   ngOnInit(): void {
       this.username = localStorage.getItem("username") || '';
-      this.fetchMyJournals()
+      this.fetchMyJournals();
   }
 
   public fetchMyJournals(){
@@ -25,6 +27,7 @@ export class MyjournalsComponent implements OnInit{
       (res)=>
       {
         this.journals = res;
+        this.length = this.journals.length;
         console.log(res);
       },
       (error)=>{

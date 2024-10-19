@@ -1,46 +1,62 @@
 .journal-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    margin: 0 auto;
-    width: 80%;
-    max-width: 800px;
-  }
-  
-  .journal-form input,
-  .journal-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-  }
-  
-  .journal-form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    width: 20%;
-  }
-  
-  .journal-form button:disabled {
-    background-color: #ccc;
-  }
-  
-  .journal-form h3 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .journal-form form {
-    display: flex;
-    flex-direction: column;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  margin: 2rem auto; /* Add margin to push the form down */
+  width: 90%; /* Increased width for better responsiveness */
+  max-width: 800px; /* Set a maximum width */
+  border: 1px solid #e0e0e0; /* Light border for separation */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #ffffff; /* White background for contrast */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.journal-form input,
+.journal-form textarea {
+  width: 100%;
+  padding: 12px; /* Increased padding for comfort */
+  margin: 10px 0;
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 14px; /* Font size */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.journal-form input:focus,
+.journal-form textarea:focus {
+  border-color: orange; /* Change border color on focus */
+  outline: none; /* Remove outline */
+}
+
+.journal-form button {
+  background-color: orange; /* Primary color */
+  color: white;
+  border: none;
+  padding: 12px 0; /* Equal padding for vertical alignment */
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%; /* Make button full width */
+  transition: background-color 0.3s; /* Smooth transition */
+  text-align: center; /* Center text */
+}
+
+.journal-form button:hover {
+  background-color: #ff7f50; /* Darker shade on hover */
+}
+
+.journal-form button:disabled {
+  background-color: #ccc; /* Disabled button color */
+}
+
+.journal-form h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.journal-form form {
+  display: flex;
+  flex-direction: column;
+}
